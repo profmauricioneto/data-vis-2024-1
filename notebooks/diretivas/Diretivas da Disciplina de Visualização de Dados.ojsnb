@@ -1,0 +1,164 @@
+{
+    "id": "d8c5a439fb6860be",
+    "slug": "diretivas-da-disciplina-de-visualizacao-de-dados",
+    "trashed": false,
+    "description": "",
+    "likes": 1,
+    "publish_level": "live",
+    "forks": 0,
+    "fork_of": null,
+    "has_importers": false,
+    "update_time": "2024-02-19T11:14:55.470Z",
+    "first_public_version": 43,
+    "paused_version": null,
+    "publish_time": "2024-02-19T11:13:23.519Z",
+    "publish_version": 47,
+    "latest_version": 47,
+    "thumbnail": "3c886b961aa46a49de1d2082ccfa816cf01703347c0fe2339eaef1c44e574e71",
+    "default_thumbnail": "3c886b961aa46a49de1d2082ccfa816cf01703347c0fe2339eaef1c44e574e71",
+    "roles": [],
+    "sharing": null,
+    "edits": [
+        {
+            "node_id": 37,
+            "value": "## Encadeando métodos\n\nD3 usa com frequência uma técnica chamada “chain syntax” (sintaxe de cadeia), na qual os métodos são encadeados com pontos “.”. Isso permite executar várias operações em um único comando:\n\n```md\nd3.select(\"#parent\")\n    .append(\"p\")\n    .text(\"Hello World!\");\n```\n\n## Operadores\nAlém de **.text()**, outros operadores:\n\nConfigurando atributos: **.attr()**\nEstilos: **.style()**\nPropriedades: **.property()**\nHTML: **.html()**\n\nExemplos:\n\n- Configurar o atributo foo com o valor bar no elemento p\n\n```js \nd3.select(\"p\").attr(\"foo\", \"bar\")\n```\n- Obter o atributo foo no elemento p\n\n```js\nd3.select(\"p\").attr(\"foo\")\n```\n\n- Altera o tamanho da fonte do estilo do elemento p\n```js\nd3.select(\"p\").style(\"font-size\", \"10px\")\n```\n\nAlém de constantes, valores de operadores também podem ser funções:\n```js\nd3.select(\"p\").style(\"font-size\", function(){\n         return normalFontSize + 10;});\n```"
+        }
+    ],
+    "owner": {
+        "id": "d9a35eeeee04c48e",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/dd231d9443a14e8ebfc3b3c53e96b6f2e5cd0cf2796bdbc46a869175a8826b25",
+        "login": "diretivas-visualizacao-de-dados",
+        "name": "Diretivas da disciplina de visualização de dados",
+        "bio": "",
+        "home_url": "",
+        "type": "team",
+        "tier": "starter_2024"
+    },
+    "creator": {
+        "id": "c81810da390158cb",
+        "github_login": "profmauricioneto",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+        "login": "mauricio-moreira-neto",
+        "name": "Maurício Moreira Neto",
+        "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+        "home_url": "http://lattes.cnpq.br/7534400645876830",
+        "tier": "public"
+    },
+    "authors": [
+        {
+            "id": "c81810da390158cb",
+            "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+            "name": "Maurício Moreira Neto",
+            "login": "mauricio-moreira-neto",
+            "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+            "home_url": "http://lattes.cnpq.br/7534400645876830",
+            "github_login": "profmauricioneto",
+            "tier": "public",
+            "approved": true,
+            "description": ""
+        }
+    ],
+    "collections": [],
+    "files": [],
+    "comments": [],
+    "commenting_lock": null,
+    "suggestion_from": null,
+    "suggestions_to": [],
+    "version": 47,
+    "title": "Diretivas da Disciplina de Visualização de Dados",
+    "license": null,
+    "copyright": "",
+    "nodes": [
+        {
+            "id": 0,
+            "value": "# Diretivas da Disciplina de Visualização de Dados\nEste notebook possui as diretivas para as práticas da disciplina de visualização de dados.\n\n## A Disciplina\n- **Descrição:** Estudar os princípios teóricos, técnicos e algumas ferramentas necessárias para visualizar informações e dados científicos\n- **Docente:** Prof. Maurício Moreira Neto\n- **Carga Horária:** 40 h/a\n\n_**Diretivas baseados nos conteúdos da Profa. Emanuele Santos**_\n\n## Sobre as práticas\nAs práticas da disciplina envolve a biblioteca D3 do JavaScript. Esta biblioteca declarativa tem a finalidade de criar visualizações com o foco nos tipos de dados fornecidos. É uma biblioteca considerada interativa, rápida e flexível. Entretanto, é necessário o conhecimento das tecnologias de HTML, CSS e JavaScript para dominá-la. \n\nO D3 **carrega** os dados na mémoria do navegador, **víncula** os dados a elementos dentro do documento, **transforma** os elementos **interpretando** o valor do dado associado ao elemento e alterando as suas propriedades visuais e **transiciona** elementos entre estados em reposta a entrada do usuário.\n\nO D3 não é suportado por navegadores antigos e não esconde os seus dados originais. Ou seja, os dados são enviados para o navegador do cliente. **Se seus dados não devem ser compartilhados, NÃO use o D3**.\n\n\n## Como utilizar o Observable Notebook?\nDentro de cada Notebook possuem células que permitem você executar o código ou o markdown. Basta clicar nos 3 pontinhos do lado esquedo da célula e clique em **edit**. Alguns exemplos são apresentados a seguir:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 11,
+            "value": "10 * 4 * 5",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 13,
+            "value": "Clique no **ícone do pino** no lado esquerdo da célula para manter a janela de código aberta, mesmo que você não esteja com a seção selecionada.\n\nCélulas podem ter nomes. Isso permite que o valor de uma célula seja referenciado por outras células.",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 15,
+            "value": "name = \"Maurício Moreira Neto\";",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 20,
+            "value": "## Células seguem o modelo de execução de dataflow\n\nUma célula referenciando outra célula é avaliada novamente automaticamente quando o valor da referência é alterado. Por exemplo, altere a definição da variável comida acima e pressione pressione _Shift-Enter_ para avaliá-la novamente.\n\nCélulas podem gerar elementos DOM (HTML, SVG, Canvas, WebGL, etc.). Você pode usar a API DOM padrão como document.createElement, ou usar o template literal built-in html:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 22,
+            "value": "<span style=\"background:yellow;\">\n  Exemplo de um documento <i>HTML</i>.<br> \n  Ele é usado para criar células com HTML.\n</span>",
+            "pinned": false,
+            "mode": "html",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 24,
+            "value": "_Essa foi apenas uma pequena introdução a notebooks Observable. Para saber mais, veja os links no final desse notebook._",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 27,
+            "value": "---",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 29,
+            "value": "# Introdução aos Elementos Básicos de D3\n\nO **operando** básico do d3 é uma **seleção**.\n- Conjunto selecionado de elementos consultados a partir do documento atual\n\n**Operadores** atuam em seleções, modificando conteúdo.\n\n**Data joins** vinculam dados a elementos, produzindo subseleções **enter** e **exit** para criação e destruição de elementos correspondendo a dados.\n\n**Transições** animadas interpolam atributos e estilos em função do tempo.\n\n**Event handlers** para lidar com ações do usuário.\n\n**Módulos** simplificando algumas tarefas de visualização.\n\n# Seleções\n\nO D3 adota a API de seletores W3C (a mesma utilizada pelo CSS e pelo JQuery) para identificar elementos para seleção:\n\n```md\npela tag (\"tag\")\npela classe (\".class\")\npelo identificador (\"#id\")\npela tag com identificador (\"tag#id\")…\n```\n\nO namespace global d3 possui métodos ```select``` e ```selectAll``` para obter as seleções e aceitam os seletores acima.\n\n## Selecionando um único elemento\n\nNo exemplo abaixo, iremos adicionar um elemento parágrafo (p) ao **div**.\n\nPrimeiro selecionamos o div pelo seu id (parent), depois adicionamos o elemento p e por fim o texto “Hello world” é adicionado a ele, através do operador **.text()**.\n\nEscreva Hello World abaixo:\n\nHello World!",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 35,
+            "value": "{\n  d3.select(\"#parent\")\n    .append(\"p\")\n    .text(\"Hello World\");\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 37,
+            "value": "## Encadeando métodos\n\nD3 usa com frequência uma técnica chamada “chain syntax” (sintaxe de cadeia), na qual os métodos são encadeados com pontos “.”. Isso permite executar várias operações em um único comando:\n\n```md\nd3.select(\"#parent\")\n    .append(\"p\")\n    .text(\"Hello World!\");\n```\n\n## Operadores\nAlém de **.text()**, outros operadores:\n\nConfigurando atributos: **.attr()**\nEstilos: **.style()**\nPropriedades: **.property()**\nHTML: **.html()**\n\nExemplos:\n\n- Configurar o atributo foo com o valor bar no elemento p\n\n```js \nd3.select(\"p\").attr(\"foo\", \"bar\")\n```\n- Obter o atributo foo no elemento p\n\n```js\nd3.select(\"p\").attr(\"foo\")\n```\n\n- Altera o tamanho da fonte do estilo do elemento p\n```js\nd3.select(\"p\").style(\"font-size\", \"10px\")\n```\n\nAlém de constantes, valores de operadores também podem ser funções:\n```js\nd3.select(\"p\").style(\"font-size\", function(){\n         return normalFontSize + 10;});\n```",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        }
+    ],
+    "resolutions": [],
+    "schedule": null,
+    "last_view_time": null
+}

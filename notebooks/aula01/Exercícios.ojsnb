@@ -1,0 +1,365 @@
+{
+    "id": "1d09df73ea996c6b",
+    "slug": "exercicios_01",
+    "trashed": false,
+    "description": "",
+    "likes": 1,
+    "publish_level": "live",
+    "forks": 0,
+    "fork_of": null,
+    "has_importers": false,
+    "update_time": "2024-02-19T11:18:57.761Z",
+    "first_public_version": 90,
+    "paused_version": 92,
+    "publish_time": "2024-02-19T11:18:24.580Z",
+    "publish_version": 95,
+    "latest_version": 95,
+    "thumbnail": "e121e433f1c464fd0c6ff53047c0ace7a430d502b105ddfc1225802a7935c3ea",
+    "default_thumbnail": "e121e433f1c464fd0c6ff53047c0ace7a430d502b105ddfc1225802a7935c3ea",
+    "roles": [],
+    "sharing": null,
+    "owner": {
+        "id": "d9a35eeeee04c48e",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/dd231d9443a14e8ebfc3b3c53e96b6f2e5cd0cf2796bdbc46a869175a8826b25",
+        "login": "diretivas-visualizacao-de-dados",
+        "name": "Diretivas da disciplina de visualização de dados",
+        "bio": "",
+        "home_url": "",
+        "type": "team",
+        "tier": "starter_2024"
+    },
+    "creator": {
+        "id": "c81810da390158cb",
+        "github_login": "profmauricioneto",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+        "login": "mauricio-moreira-neto",
+        "name": "Maurício Moreira Neto",
+        "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+        "home_url": "http://lattes.cnpq.br/7534400645876830",
+        "tier": "public"
+    },
+    "authors": [
+        {
+            "id": "c81810da390158cb",
+            "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+            "name": "Maurício Moreira Neto",
+            "login": "mauricio-moreira-neto",
+            "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+            "home_url": "http://lattes.cnpq.br/7534400645876830",
+            "github_login": "profmauricioneto",
+            "tier": "public",
+            "approved": true,
+            "description": ""
+        }
+    ],
+    "collections": [],
+    "files": [
+        {
+            "id": "bea2bb6a82ed7b62f5f80c016128fab42bd499c5090de6e20c460b45ca4b6faeda24216895c010dcb90c2b28935086782254e7b96ee40e3f58d50bd4b6b007ff",
+            "url": "https://static.observableusercontent.com/files/bea2bb6a82ed7b62f5f80c016128fab42bd499c5090de6e20c460b45ca4b6faeda24216895c010dcb90c2b28935086782254e7b96ee40e3f58d50bd4b6b007ff",
+            "download_url": "https://static.observableusercontent.com/files/bea2bb6a82ed7b62f5f80c016128fab42bd499c5090de6e20c460b45ca4b6faeda24216895c010dcb90c2b28935086782254e7b96ee40e3f58d50bd4b6b007ff?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27Captura%2520de%2520Tela%25202024-02-19%2520a%25CC%2580s%252007.45.59.png",
+            "name": "Captura de Tela 2024-02-19 às 07.45.59.png",
+            "create_time": "2024-02-19T10:46:26.167Z",
+            "mime_type": "image/png",
+            "status": "public",
+            "size": 38872,
+            "content_encoding": null,
+            "private_bucket_id": null
+        },
+        {
+            "id": "186cd97e256e7e2b2632a5593e9a98f5f139f5b0205f5fc9be11396f6c516ea346a65d704420d769419765cf6b9a6b849a8d140233f9d029559ebbeea97eccb1",
+            "url": "https://static.observableusercontent.com/files/186cd97e256e7e2b2632a5593e9a98f5f139f5b0205f5fc9be11396f6c516ea346a65d704420d769419765cf6b9a6b849a8d140233f9d029559ebbeea97eccb1",
+            "download_url": "https://static.observableusercontent.com/files/186cd97e256e7e2b2632a5593e9a98f5f139f5b0205f5fc9be11396f6c516ea346a65d704420d769419765cf6b9a6b849a8d140233f9d029559ebbeea97eccb1?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27Captura%2520de%2520Tela%25202024-02-19%2520a%25CC%2580s%252007.53.44.png",
+            "name": "Captura de Tela 2024-02-19 às 07.53.44.png",
+            "create_time": "2024-02-19T10:54:05.750Z",
+            "mime_type": "image/png",
+            "status": "public",
+            "size": 7803,
+            "content_encoding": null,
+            "private_bucket_id": null
+        },
+        {
+            "id": "bce44675431c53b07485426aed4f257c4b5189a4fdcbd705c14558907ae61a1ce2e4a90380cf8bd55cc6db41cf17512f961bb574069c67b525e62b588bdb8bd1",
+            "url": "https://static.observableusercontent.com/files/bce44675431c53b07485426aed4f257c4b5189a4fdcbd705c14558907ae61a1ce2e4a90380cf8bd55cc6db41cf17512f961bb574069c67b525e62b588bdb8bd1",
+            "download_url": "https://static.observableusercontent.com/files/bce44675431c53b07485426aed4f257c4b5189a4fdcbd705c14558907ae61a1ce2e4a90380cf8bd55cc6db41cf17512f961bb574069c67b525e62b588bdb8bd1?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27Captura%2520de%2520Tela%25202024-02-19%2520a%25CC%2580s%252007.56.04.png",
+            "name": "Captura de Tela 2024-02-19 às 07.56.04.png",
+            "create_time": "2024-02-19T10:56:24.962Z",
+            "mime_type": "image/png",
+            "status": "public",
+            "size": 8941,
+            "content_encoding": null,
+            "private_bucket_id": null
+        },
+        {
+            "id": "8793358fa335c112e63bfb048c21e3c7ee10a77e644fd35d5631d1196be8ddbcf7e517584169c256399b881d323ce24511c399dfa70d7a1281f391be68bb3cd8",
+            "url": "https://static.observableusercontent.com/files/8793358fa335c112e63bfb048c21e3c7ee10a77e644fd35d5631d1196be8ddbcf7e517584169c256399b881d323ce24511c399dfa70d7a1281f391be68bb3cd8",
+            "download_url": "https://static.observableusercontent.com/files/8793358fa335c112e63bfb048c21e3c7ee10a77e644fd35d5631d1196be8ddbcf7e517584169c256399b881d323ce24511c399dfa70d7a1281f391be68bb3cd8?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27Captura%2520de%2520Tela%25202024-02-19%2520a%25CC%2580s%252008.00.48.png",
+            "name": "Captura de Tela 2024-02-19 às 08.00.48.png",
+            "create_time": "2024-02-19T11:00:59.314Z",
+            "mime_type": "image/png",
+            "status": "public",
+            "size": 23350,
+            "content_encoding": null,
+            "private_bucket_id": null
+        },
+        {
+            "id": "b4d8dc1d4d12931945c3d3fbe72797d91f8b2f623e1abfd9118bde97cfb84a4297358d8647d7807972addf22d7cc0e8dcc63b6fa9c7a970ff332771b64e9118e",
+            "url": "https://static.observableusercontent.com/files/b4d8dc1d4d12931945c3d3fbe72797d91f8b2f623e1abfd9118bde97cfb84a4297358d8647d7807972addf22d7cc0e8dcc63b6fa9c7a970ff332771b64e9118e",
+            "download_url": "https://static.observableusercontent.com/files/b4d8dc1d4d12931945c3d3fbe72797d91f8b2f623e1abfd9118bde97cfb84a4297358d8647d7807972addf22d7cc0e8dcc63b6fa9c7a970ff332771b64e9118e?response-content-disposition=attachment%3Bfilename*%3DUTF-8%27%27Captura%2520de%2520Tela%25202024-02-19%2520a%25CC%2580s%252008.03.54.png",
+            "name": "Captura de Tela 2024-02-19 às 08.03.54.png",
+            "create_time": "2024-02-19T11:04:04.031Z",
+            "mime_type": "image/png",
+            "status": "public",
+            "size": 20456,
+            "content_encoding": null,
+            "private_bucket_id": null
+        }
+    ],
+    "comments": [],
+    "commenting_lock": null,
+    "suggestion_from": null,
+    "suggestions_to": [],
+    "version": 92,
+    "title": "Exercícios",
+    "license": null,
+    "copyright": "",
+    "nodes": [
+        {
+            "id": 0,
+            "name": "",
+            "value": "_**Exercícios baseados nos conteúdos da Profa. Emanuele Santos**_\n# Exercícios\n\nModifique o código html da célula abaixo usando d3 na célula seguinte para: Adicionar um novo elemento div ao div com id exercicio contendo o seguinte estilo:\n```css\nborder: 1px black solid\nbackground-color: LightYellow\nfont-size: 24px\n```\n\nO novo div deve possuir id igual a **newDiv**.\n\nDepois adicione o parágrafo com o texto “Novo parágrafo!” ao elemento div com id newDiv. O resultado deve ser como o mostrado abaixo:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 5,
+            "name": "",
+            "value": "<div id=\"exercicio\">\n   <p>Célula html</p>\n</div>",
+            "pinned": true,
+            "mode": "html",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 7,
+            "name": null,
+            "value": "{\n  // coloque seu código aqui!\n}",
+            "pinned": false,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 12,
+            "name": "",
+            "value": "# Selecionando múltiplos elementos\n\nPodemos selecionar mais de um elemento de uma vez:\n\n```js\nd3.selectAll(\"rect\") \n  .attr(\"width\", \"200\");\n```\n\n## Adicionando elementos\nO operador .append() cria um novo elemento com o nome dado e o adiciona como último filho de cada elemento da seleção.\n\nEsse operador retorna uma nova seleção contendo o elemento recém adicionado.\n",
+            "pinned": false,
+            "mode": "md",
+            "data": {},
+            "outputs": []
+        },
+        {
+            "id": 18,
+            "name": "",
+            "value": "<div class=\"selectall-example\">\n  <svg width=\"800\" height=\"300\"></svg>\n</div>\n<style>\n  .selectall-example {\n    border: 1px solid black;\n    display: inline-block;\n  }\n</style>",
+            "pinned": true,
+            "mode": "html",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 21,
+            "name": null,
+            "value": "{\n  // retorna uma seleção d3 do elemento svg dentro do elemento de classe selectall-example\n  const svg = d3.select('.selectall-example').select(\"svg\") \n  \n   svg.append('rect')\n      .attr(\"x\", \"50\")\n      .attr(\"y\", \"50\")\n   svg.append('rect')\n      .attr(\"x\", \"300\")\n      .attr(\"y\", \"50\")\n   svg.append('rect')\n      .attr(\"x\", \"550\")\n      .attr(\"y\", \"50\")\n   svg.selectAll('rect')\n      .attr(\"width\", \"200\")\n      .attr(\"height\", \"200\")\n      .style('fill', 'SkyBlue')\n      .style('stroke', '#777')\n      .style('stroke-width', '1')\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 23,
+            "name": "",
+            "value": "# Lidando com dados\n\nEm Visualização de Dados, nós mapeamos **dados** a **elementos visuais**. Em D3, nós vinculamos **dados de entrada** a elementos no **DOM**. Usamos o operador .data() (mais detalhes à frente).\n\nD3 consegue lidar com diferentes tipos de dados:\n\nQualquer array de números, strings ou objetos;\nArquivos JSON (e GeoJSON);\nArquivos CSV;\nArquivos Texto;\nArquivos XML e\nArquivos HTML.\n\n# O Padrão enter-update-exit\n\nÉ usado para definir a conexão entre dados e sua representação visual.\n\n![Captura de Tela 2024-02-19 às 07.45.59.png](${await FileAttachment(\"Captura de Tela 2024-02-19 às 07.45.59.png\").url()})\n\nDados ainda não vinculados produzem a seleção enter (**selection.enter**).\n\nItens de dados vinculados a elementos existentes produzem a seleção update (**selection.data**).\n\nElementos ainda não vinculados produzem a seleção exit (**selection.exit**).\n\n# Vinculando um vetor a dados\n\nUsamos o operador .data().\n\nPodemos calcular os parâmetros da visualização a partir dos dados.\n\nNo exemplo abaixo, as barras estão com altura fixa, mas vamos usar os próprios valores do vetor para calcular a altura da barra. Podemos usar algo como:\n\n```js\n.attr('height', (d) => d*2) // Configura a altura da barra usando o próprio valor do dado\n```\n\nTambém iremos ajustar a escala para posicionar as barras de forma correta e acrescentar labels com o valor de cada barra para ficar como a figura abaixo:\n\n![Captura de Tela 2024-02-19 às 07.53.44.png](${await FileAttachment(\"Captura de Tela 2024-02-19 às 07.53.44.png\").url()})\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 31,
+            "name": null,
+            "value": "barras1 = {\n  const width = 700\n  const height = 200\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(width, height))\n  const arrayOfNumbers = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8]\n\n  svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)\n    .data(arrayOfNumbers) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()\n    .enter()// Retorna a parte dos dados que é nova (\"entering\") e ainda não está vinculada aos elementos DOM\n      .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado\n      .attr('x', (d, i) => i * 30 + 20) // Configura a posição x de acordo com o índice do vetor\n      .attr('y', 10) // Configura a posição y de cada barra\n      .attr('width', 20) //Configura a largura de cada barra\n      .attr('height', d => d*2) // Configura a altura de cada barra\n      .attr('fill', \"DarkSlateGrey\") // Configura a cor de preenchimento de cada barra\n    \n  // adicionando o texto na parte superior.\n  svg.selectAll('text')\n    .data(arrayOfNumbers)\n    .enter().append('text')\n      .text(d => d)\n      .attr('x', (d, i) => i * 30 + 20) \n      .attr('y', d => 25 + (d * 2) + 3)\n      .attr('font-size',\"12px\")\n      .attr('text-anchor', 'middle')\n      .attr('text-transform', 'uppercase')\n      .attr('fill', \"greemonic\")\n\n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 33,
+            "name": "",
+            "value": "# Vinculando um vetor de objetos\nQuando temos um vetor de objetos, podemos acessar os atributos de cada item de dado diretamente:\n\n```js\n.attr('height', (d) => d.height*2) // Configura a altura da barra usando o próprio valor do dado\n```\n\nIremos modificar o exemplo abaixo para alterar a altura e a cor das barras de acordo com a figura abaixo:\n\n![Captura de Tela 2024-02-19 às 07.56.04.png](${await FileAttachment(\"Captura de Tela 2024-02-19 às 07.56.04.png\").url()})\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 36,
+            "name": null,
+            "value": "barras2 = {\n  const width = 700\n  const height = 200\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(width, height))\n  const dataset = [ \n        {height: 10, color: 23},{height: 15, color: 33},\n        {height: 30, color: 40},{height: 50, color: 60},\n        {height: 80, color: 22},{height: 65, color: 10},\n        {height: 55, color: 5},{height: 30, color: 30},\n        {height: 20, color: 60},{height: 10, color: 90},\n        {height: 8, color: 10}]\n  \n  let colorScale = d3.scaleLinear()\n        .domain([0, 100])\n        .range([\"Khaki\", \"Gold\"]); // Escala de cor\n\n  \n  svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)\n    .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()\n    .enter()// Retorna a parte dos dados que é nova (\"entering\") e ainda não está vinculada aos elementos DOM\n      .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado\n      .attr('x', (d, i) => i * 30 + 20) // Configura a posição x de acordo com o índice do vetor\n      .attr('y', 10) // Configura a posição y de cada barra\n      .attr('width', 20) //Configura a largura de cada barra\n      .attr('height', d => d.height * 2) // Configura a altura de cada barra\n      .attr('fill', d => colorScale(d.color)) // Configura a cor de preenchimento de cada barra\n\n    // colocando o texto na parte superior\n    svg.selectAll('text')\n      .data(dataset)\n      .enter()\n        .append('text')\n        .text(d => d.height)\n        .attr('x', (d, i) => i * 30 + 20)\n        .attr('y', d => 30 + (d.height * 2) + 5)\n        .attr('font-size', \"12px\")\n        .attr('font-weight', \"bold\")\n        .attr('text-anchor', 'middle')\n        .attr('text-transform', 'uppercase')\n        .attr('fill', \"greemonic\");\n    \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": {},
+            "outputs": []
+        },
+        {
+            "id": 39,
+            "name": "",
+            "value": "# Funções úteis para lidar com vetores de dados\nA seguir estão funções para:\n\n- Ordenar vetores\n- Calcular o mínimo e o máximo\n- Calcular média, mediana, somatório, etc.\n\nconst array = [3, 2, 11, 7, 6, 4, 10, 8, 15];\n\nd3.min => 2\n\nd3.max => 15\n\nd3.extent => 2,15\n\nd3.sum => 66\n\nd3.median => 7\n\nd3.mean => 7.333333333333333\n\narray.sort(d3.ascending) => 2,3,4,6,7,8,10,11,15\n\narray.sort(d3.descending) => 15,11,10,8,7,6,4,3,2\n\nd3.quantile(array.sort(d3.ascending), 0.25) => 4\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 44,
+            "name": null,
+            "value": "{\n  const array = [3, 2, 11, 7, 6, 4, 10, 8, 15];\n  const div = d3.select(\".array-utils\")\n  div.select(\"#min\").text(d3.min(array))\n  div.select(\"#max\").text(d3.max(array));\n  div.select(\"#extent\").text(d3.extent(array));\n  div.select(\"#sum\").text(d3.sum(array));\n  div.select(\"#median\").text(d3.median(array));\n  div.select(\"#mean\").text(d3.mean(array));\n  div.select(\"#asc\").text(array.sort(d3.ascending));\n  div.select(\"#desc\").text(array.sort(d3.descending));\n  div.select(\"#quantile\").text(\n    d3.quantile(array.sort(d3.ascending), 0.25)\n  );\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 50,
+            "name": "",
+            "value": "# Carregando dados de arquivo\n\nO d3 possui diversas funções para carregar arquivos. Por exemplo, para ler um arquivo JSON, usamos d3.json:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 52,
+            "name": null,
+            "value": "dataset = d3.json('https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/files/observable/data.json');",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 56,
+            "name": "",
+            "value": "Para mais informações sobre carregar arquivos no Observable, veja [[Introduction to data](https://observablehq.com/@observablehq/introduction-to-data)](Introduction to data).\n\nAbaixo vamos visualizar esse dataset com um gráfico de barras horizontal semelhante à figura mostrada abaixo.\n\n![Captura de Tela 2024-02-19 às 08.00.48.png](${await FileAttachment(\"Captura de Tela 2024-02-19 às 08.00.48.png\").url()})\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 59,
+            "name": null,
+            "value": "barras3 = {\n  const width = 600\n  const height = 400\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(width, height))\n  svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)\n    .data(dataset) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()\n    .enter()// Retorna a parte dos dados que é nova (\"entering\") e ainda não está vinculada aos elementos DOM\n      .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado\n      .attr('x', 10) // Configura a posição x de acordo com o índice do vetor\n      .attr('y', (d, i) => i * 30 + 20) // Configura a posição y de cada barra de acordo com o índice do vetor\n      .attr('height', 20) //Configura a largura de cada barra\n      .attr('width', 200) // Configura a altura de cada barra\n      .attr('fill', \"DarkCyan\") // Configura a cor de preenchimento de cada barra\n \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 61,
+            "name": "",
+            "value": "# Ordenando dados\nCriamos uma função para comparar valores:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 66,
+            "name": null,
+            "value": "comparePorDespesa =  (a, b) => a.despesa - b.despesa",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 69,
+            "name": null,
+            "value": "sorteddata = d3.json('https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/files/observable/data.json')",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 71,
+            "name": "",
+            "value": "Depois usamos essa função para ordenar os dados, dentro da célula que gera a visualização como mostrado na figura abaixo:\n\n![Captura de Tela 2024-02-19 às 08.03.54.png](${await FileAttachment(\"Captura de Tela 2024-02-19 às 08.03.54.png\").url()})",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 73,
+            "name": null,
+            "value": "barras4 = {\n  const width = 600\n  const height = 400\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(width, height))\n  \n  sorteddata.sort(comparePorDespesa) //aqui os dados são ordenados\n  svg.selectAll('rect') // Seleciona todos os retângulos filhos de svg (nesse caso, uma seleção vazia)\n    .data(sorteddata) // Vincula arrayOfNumbers com DOM elementos <rect/>, produzindo seleções .enter(),.exit()\n    .enter()// Retorna a parte dos dados que é nova (\"entering\") e ainda não está vinculada aos elementos DOM\n      .append('rect') // Para cada item de dado, adiciona um <rect /> ao svg selecionado\n      .attr('x', 10) // Configura a posição x de acordo com o índice do vetor\n      .attr('y', (d, i) => i * 30 + 20) // Configura a posição y de cada barra de acordo com o índice do vetor\n      .attr('height', 20) //Configura a largura de cada barra\n      .attr('width', 200) // Configura a altura de cada barra\n      .attr('fill', \"DarkCyan\") // Configura a cor de preenchimento de cada barra\n \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 78,
+            "name": "",
+            "value": "Ao concluir os exercícios, publique o seu fork, usando o botão **Publish** no topo direito da página.\n\n# Para aprender mais sobre Observable\n\nPara aprender mais sobre Observable, recomendo os seguintes notebooks:\n\n[[Manual do Usuário](https://observablehq.com/@observablehq/user-manual)](Manual do Usuário): _A seção **Start here** é obrigatória. Ela contém todos os notebooks relevantes para usar notebooks Observable._\nUma série de [[tutoriais em 3 partes](https://observablehq.com/@observablehq/tutorial)](tutoriais em 3 partes)\n\n\n## Importar a biblioteca D3 como um único objeto Javascript\n\nIsso é possível no final de um notebook Observable, mas não em Javascript puro.",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 82,
+            "name": null,
+            "value": "d3 = require('d3');",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 84,
+            "name": "",
+            "value": "Outras utilidades para o tutorial:\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 86,
+            "name": null,
+            "value": "key = c =>\n  html`<span style='border-radius:5px;background:#ddf;display:inline-block;padding:0 4px;'>${c}</span>`",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        },
+        {
+            "id": 88,
+            "name": null,
+            "value": "greypin = html`<svg style='vertical-align:middle' viewBox=\"0 0 16 16\" fill='#999999' stroke=none viewBox=\"0 0 16 16\" width=16 height=16>\n    <path d=\"M8 1h3v1l-1 1v4l2 .875V9H9v5.125L8 15l-1-.875V9H4V7.875L6 7V3L5 2V1z\" />\n  </svg>`",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "outputs": []
+        }
+    ],
+    "resolutions": [],
+    "schedule": null,
+    "last_view_time": null
+}
