@@ -1,0 +1,301 @@
+{
+    "id": "c2bea4f9500a40ce",
+    "slug": "introducao-ao-d3-parte-2-escalas-e-eixos",
+    "trashed": false,
+    "description": "",
+    "likes": 0,
+    "publish_level": "live",
+    "forks": 0,
+    "fork_of": {
+        "id": "2aab8660587f27df",
+        "slug": "introducao-ao-d3-parte-2-escalas-e-eixos",
+        "title": "Introdução ao D3 (Parte 2) - Escalas e Eixos",
+        "owner": {
+            "id": "d94d0ab1065acef4",
+            "avatar_url": "https://avatars.observableusercontent.com/avatar/b8fd60670900bb19b0b7d34ef8969829692cc2753f792f48652fdbe54ed96d36",
+            "login": "emanueles",
+            "name": "Emanuele Santos",
+            "bio": "Data Visualization Enthusiast, professor of Computer Science at Universidade Federal do Ceara, Fortaleza, Brazil.",
+            "home_url": "https://emanueles.github.io",
+            "type": "team",
+            "tier": "starter_2024"
+        },
+        "version": 249
+    },
+    "has_importers": false,
+    "update_time": "2024-04-29T12:00:45.567Z",
+    "first_public_version": 249,
+    "paused_version": null,
+    "publish_time": "2024-04-29T12:06:12.714Z",
+    "publish_version": 249,
+    "latest_version": 249,
+    "thumbnail": "07eb06e9c1bee8cfbb4fad84536012e0733cc136ac5e8f222a05984f60a478fb",
+    "default_thumbnail": "07eb06e9c1bee8cfbb4fad84536012e0733cc136ac5e8f222a05984f60a478fb",
+    "roles": [],
+    "sharing": null,
+    "owner": {
+        "id": "d9a35eeeee04c48e",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/dd231d9443a14e8ebfc3b3c53e96b6f2e5cd0cf2796bdbc46a869175a8826b25",
+        "login": "diretivas-visualizacao-de-dados",
+        "name": "Diretivas da disciplina de visualização de dados",
+        "bio": "",
+        "home_url": "",
+        "type": "team",
+        "tier": "starter_2024"
+    },
+    "creator": {
+        "id": "c81810da390158cb",
+        "github_login": "profmauricioneto",
+        "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+        "login": "mauricio-moreira-neto",
+        "name": "Maurício Moreira Neto",
+        "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+        "home_url": "http://lattes.cnpq.br/7534400645876830",
+        "tier": "public"
+    },
+    "authors": [
+        {
+            "id": "c81810da390158cb",
+            "avatar_url": "https://avatars.observableusercontent.com/avatar/02f0d54ecfba128a53f9ed16b53bad24496a62fd0665bf77009b97462d37e3cb",
+            "name": "Maurício Moreira Neto",
+            "login": "mauricio-moreira-neto",
+            "bio": "Professor at Unichristus of the Information Systems and Systems Analysis and Development courses.",
+            "home_url": "http://lattes.cnpq.br/7534400645876830",
+            "github_login": "profmauricioneto",
+            "tier": "public",
+            "approved": true,
+            "description": ""
+        }
+    ],
+    "collections": [],
+    "files": [],
+    "comments": [],
+    "commenting_lock": null,
+    "suggestion_from": null,
+    "suggestions_to": [],
+    "version": 249,
+    "title": "Introdução ao D3 (Parte 2) - Escalas e Eixos",
+    "license": null,
+    "copyright": "",
+    "nodes": [
+        {
+            "id": 0,
+            "value": "# Introdução ao D3 (Parte 2) - Escalas e Eixos \n\nNeste notebook iremos nos aprofundar na criação de Visualizações Web usando D3.\nAprenderemos a usar escalas e eixos, construindo um scatterplot.",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 9,
+            "value": "## Um Primeiro Scatterplot\n\nScatterplots são uma maneira de compararmos dois atributos quantitativos em dois eixos diferentes, horizontal e vertical, ou **x** e **y**.\n\nNa célula abaixo iremos criar um scatterplot. Complete-o de acordo com as instruções em sala (veja os comentários na célula). O resultado final deve ser como o mostrado abaixo:\n\n![scatterplot1](https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/images/observable/intro2_scatter1.png)",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 180,
+            "value": "dataset = [ [5, 20], [480, 90], [250, 50],\n            [100, 33], [330, 95], [410, 12], \n            [475, 44], [25, 67], [85, 21],\n            [220, 88] ]",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 186,
+            "value": "svgwidth = 500",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 187,
+            "value": "svgheight = 150",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 14,
+            "value": "scatter1 = {\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(svgwidth, svgheight))\n  // Usando a variável svg, faça a vinculação com o dataset, criando círculos para a seleção enter\n  // Veja o notebook da aula da semana passada para relembrar como fazer isso\n  // O centro de cada círculo, atributos cx e cy deve ser posicionado de acordo com as \n  // coordenadas do vetor d[0] e d[1]. O raio de cada círculo (r) deve ser 5. \n  \n  \n  // A partir da variável svg,faça novamente a vinculação com o dataset, criando elementos de texto\n  // nas mesmas posições dos centros dos círculos. Cada texto mostrará as coordenadas do seu ponto\n  // correspondente.\n  \n  \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 38,
+            "value": "## Escalas\n\nA ideia básica de escalas é transformar um número em um certo intervalo (chamado **domain**) em um número em um outro intervalo (chamado **range**):\n\n![d3_scale](https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/images/observable/d3_scale.png)",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 130,
+            "value": "scale = d3.scaleLinear()\n              .range([0,120])\n              .domain([25,85])",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 135,
+            "value": "### Escalas quantitativas\n\n* Escalas lineares (linear, quantize e quantile)\n* Escalas logarítmicas\n* Escalas potenciais (incluindo raiz quadrada)\n\nNeste notebook, trabalharemos apenas com a escala [linear](https://github.com/d3/d3/blob/master/API.md#scales-d3-scale).\n\n### Domain e Range\nPara todas as escalas com exceção de quantize e quantile, domain e range funcionam da mesma maneira:\ndomain e range aceitam um vetor como parâmetro. \n\n```javascript\nlet scale = d3.scaleLinear()\n              .range([0,120])\n              .domain([25,85])\n```\n\nOu seja, os vetores definem os limites do intervalo que será transformado.\nNormalmente são dois números, mas podem ser mais de dois, veja o exemplo a seguir.\n\n![d3_scale2](https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/images/observable/d3_scale2.png)\n\nSe o parâmetro for um vetor com mais de dois números, então estamos falando de escalas segmentadas:",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 145,
+            "value": "scale2 = d3.scaleLinear().domain([25, 45, 85]).range([0, 80, 120])",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 126,
+            "value": "\n> ** Atenção**: domain e range devem ter os mesmos números de segmentos.\n\n### Clamping\n\nO que acontece se a escala é usada para processar um número fora do domínio? Esse comportamento é controlado pelo método clamping.\n\nSe ele for *true*, os valores fora do domínio são truncados para o mínimo e máximo da escala. Se for *false* a transformação é feita normalmente e retornará um valor fora do range.",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 161,
+            "value": "scale(100) // retorna 150",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 164,
+            "value": "value = {\n  scale.clamp(false); // set clamp to true\n  return scale(100); //retorna 120\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 168,
+            "value": "## Usando escalas\n\nTipicamente nós chamaremos a função de escala de dentro de um método \\`.attr()\\` ou similar.\n\n```javascript\n.attr(\"cy\", scale(d[1]))\n```\n\nVamos aplicar escalas ao nosso scatterplot.",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 155,
+            "value": "md `\nModifique o scatterplot acima na célula abaixo para que utilize uma escala linear horizontal e uma vertical.`",
+            "pinned": false,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 176,
+            "value": "// crie aqui a escala horizontal xScale",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 177,
+            "value": "// crie aqui a escala vertical yScale",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 42,
+            "value": "scatter2 = {\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const svg = d3.select(DOM.svg(svgwidth, svgheight)) \n  \n  // Usando a variável svg, faça a vinculação com o dataset, criando círculos para a seleção enter\n  // Veja o notebook da aula da semana passada para relembrar como fazer isso\n  // O centro de cada círculo, atributos cx e cy deve ser posicionado de acordo com as \n  // coordenadas do vetor d[0] e d[1] na escala de eixos. O raio de cada círculo deve ser 5. \n  \n  \n  // A partir da variável svg,faça novamente a vinculação com o dataset, criando elementos de texto\n  // nas mesmas posições dos centros dos círculos. Cada texto mostrará as coordenadas do seu ponto\n  // correspondente.\n  \n  \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return svg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 49,
+            "value": "## Refinando o scatterplot\n\n### Utilizando Margens\nObserve na célula abaixo como são definidas as margens de acordo com [esta convenção](https://observablehq.com/@d3/margin-convention).\n\nDepois copie a parte do código referente à criação das escalas (com a escala vertical invertida), dos círculos e\ndos labels da célula acima para a célula abaixo e veja o resultado.\n\nDepois siga as instruções para a criação de eixos que estão no PDF.\n",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 198,
+            "value": "margin = {\n  //Definimos o objeto margin\n  let margin = {top: 40, right: 40, bottom: 40, left: 40};\n  return margin;\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 203,
+            "value": "\n\nDepois definimos `svgwidth` e `svgheight` como as dimensões internas da área do gráfico (área útil).\nModifique as células  `svgwidth` e `svgheight` para ficarem como mostrado abaixo:\n\n```javascript\nsvgwidth = 800 - margin.left - margin.right\n\nsvgheight = 200 - margin.top - margin.bottom\n```",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 53,
+            "value": "scatter3 = { \n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const outersvg = d3.select(DOM.svg(svgwidth + margin.left + margin.right,\n                                svgheight + margin.top + margin.bottom))\n  // Depois adicionamos um elemento g no svg que vai transladar a origem \n  // do gráfico como sendo a origem da área útil do gráfico\n  const svg = outersvg.append('g')\n                       .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\")\n \n  \n  // Usando a variável svg, faça a vinculação com o dataset, criando círculos para a seleção enter\n  // Veja o notebook da aula da semana passada para relembrar como fazer isso\n  // O centro de cada círculo, atributos cx e cy deve ser posicionado de acordo com as \n  // coordenadas do vetor d[0] e d[1] na escala de eixos. O raio de cada círculo deve ser 5. \n  \n  \n  // A partir da variável svg,faça novamente a vinculação com o dataset, criando elementos de texto\n  // nas mesmas posições dos centros dos círculos. Cada texto mostrará as coordenadas do seu ponto\n  // correspondente.\n  \n  // Chamadas para desenhar os eixos\n  \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return outersvg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 89,
+            "value": "## Exercício\nCarregue os dados do arquivo [movies.json](https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/files/observable/movies.json) e construa um scatterplot comparando bilheteria\n(Worldwide_Gross_M) e orçamento (Budget_M). Existe alguma correlação entre essas variáveis? Existem outliers? Quais são?",
+            "pinned": false,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 219,
+            "value": "moviesdataset = d3.json('https://raw.githubusercontent.com/emanueles/datavis-course/master/assets/files/observable/movies.json')",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 90,
+            "value": "movies = {\n  // DOM.svg() é um método específico do Observable para criar um elemento DOM SVG. \n  const outersvg = d3.select(DOM.svg(svgwidth + margin.left + margin.right,\n                                svgheight + margin.top + margin.bottom))\n  // Depois adicionamos um elemento g no svg que vai transladar a origem \n  // do gráfico como sendo a origem da área útil do gráfico\n  const svg = outersvg.append('g')\n                       .attr(\"transform\", \"translate(\" + margin.left + \",\" + margin.top + \")\")\n  \n  // Escreva aqui o código\n  \n \n  // Once we append the vis elments to it, we return the DOM element for Observable to display above.\n  return outersvg.node()\n}",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        },
+        {
+            "id": 115,
+            "value": "Escreva sua resposta aqui.",
+            "pinned": true,
+            "mode": "md",
+            "data": null,
+            "name": ""
+        },
+        {
+            "id": 4,
+            "value": "d3 = require('d3')",
+            "pinned": true,
+            "mode": "js",
+            "data": null,
+            "name": null
+        }
+    ],
+    "resolutions": [],
+    "schedule": null,
+    "last_view_time": null
+}
