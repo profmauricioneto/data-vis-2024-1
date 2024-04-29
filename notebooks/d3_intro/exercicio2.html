@@ -9,7 +9,7 @@
   <body>
     <label for="compare">Compare to:</label>
     <select name="movies" id="movies">
-        <option value="gross">Total Gross</option>
+        <option value="gross">Gross</option>
         <option value="budget">Budget</option>
     </select>
 
@@ -22,6 +22,10 @@
 
 
     <script type="text/javascript">
+      let colorScale = d3.scaleLinear()
+        .domain([600, 1000])
+        .range(["#008000", "#FF0000"]); // Escala de cor
+
       function render(data, comparator) {
         // Criando os elementos HTML que ainda nao existem!
         d3.select("#bar-movies")
@@ -37,6 +41,9 @@
           .selectAll("div.h-bar")
           .data(data)
           .attr("class", "h-bar")
+          .style("background-color", function (d) {
+            return colorScale(d.Worldwide_Gross_M);
+          })
           .style("width", function (d) {
             return (d.Worldwide_Gross_M)  + "px";
           })
@@ -68,12 +75,10 @@
 
     var select = document.getElementById("movies");
     select.addEventListener("change", function(){
-        if (select.value == "gross"){
+        if (select.value === "gross"){
             render(moviesbygross, measureTotalGross);
-        } else if (select.value == "budget") {
+        } else if (select.value === "budget") {
             render(moviesbybudget, measureTotalBudget);
-        } else {
-            render(moviesbygross, measureTotalGross);
         }
     });
 
