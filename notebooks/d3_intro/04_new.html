@@ -17,8 +17,8 @@
             .enter()
                 .append("div")
                     .attr("class", "h-bar")
-					.style("width", function(d,i) {return d + "5px"})
-                .append("span");
+                    .style("width", function(d, i){return d  + "5px"})
+                .append("span").text(function(d) {return d;});
     }
     render(data);
 </script>
