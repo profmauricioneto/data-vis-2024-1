@@ -63,7 +63,7 @@
       };
 
     let measureTotalBudget = function (a, b) {
-        return a.Budget_M - b.Budget_M;
+        return b.Budget_M - a.Budget_M;
       };
 
     let moviesbygross = d3.json("data/movies.json").then(function (json) {
