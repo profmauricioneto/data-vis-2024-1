@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DC.js Line Chart</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+  
+      #chart1, #chart2 {
+        margin: auto;
+        width: 80%;
+      }
+  
+      .dc-legend {
+        fill: #333;
+      }
+  
+      .dc-legend-item text {
+        fill: #333;
+      }
+  
+      .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2px;
+      }
+  
+      .axis text {
+        font-size: 13px;
+      }
+  
+      .axis path,
+      .axis line {
+        fill: none;
+        stroke: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+
+    <script>
+      d3.csv(
+        "https://gist.githubusercontent.com/emanueles/d8df8d875edda71aa2e2365fae2ce225/raw/1e949d3da02ed6caa21fe3a7a12a4e5a611a4bab/stocks.csv"
+      )
+        .then((data) => {
+          let parseDate = d3.timeParse("%Y/%m/%d");
+          data.forEach((d) => {
+            d.date = parseDate(d.date);
+            d.google = +d.google;
+            d.facebook = +d.facebook;
+          });
+          buildVisualization(data);
+        })
+        .catch((error) => {
+          console.error("Error loading or processing data:", error);
+        })
+        .finally(() => {
+          console.log("Data loading and processing complete.");
+        });
+
+      function buildVisualization(data) {
+        let facts = crossfilter(data);
+        let dateDimension = facts.dimension((d) => d.date);
+        let googleGroup = dateDimension.group().reduceSum((d) => d.google);
+        let facebookGroup = dateDimension.group().reduceSum((d) => d.facebook);
+
+        let lineChart = dc.lineChart("#chart1");
+        let lineChart2 = dc.lineChart("#chart2");
+        let xScale = d3
+          .scaleTime()
+          .domain([
+            dateDimension.bottom(1)[0].date,
+            dateDimension.top(1)[0].date,
+          ]);
+
+        lineChart
+          .width(800)
+          .height(500)
+          .dimension(dateDimension)
+          .group(googleGroup, "Google")
+          .x(xScale)
+          .xUnits(d3.timeDays)
+          .renderArea(false)
+          .renderHorizontalGridLines(true)
+          .brushOn(false)
+          .legend(dc.legend().x(680).y(10).itemHeight(13).gap(5))
+          .title((d) => `${d.key.toDateString()}\n${d.value}`)
+          .yAxisLabel("Valor")
+          .xAxisLabel("Data")
+          .margins({ top: 40, right: 50, bottom: 25, left: 40 })
+          .render();
+
+        lineChart2
+          .width(800)
+          .height(500)
+          .dimension(dateDimension)
+          .x(xScale)
+          .xUnits(d3.timeDays)
+          .renderArea(false)
+          .renderHorizontalGridLines(true)
+          .brushOn(false)
+          .legend(dc.legend().x(680).y(10).itemHeight(13).gap(5))
+          .title((d) => `${d.key.toDateString()}\n${d.value}`)
+          .yAxisLabel("Valor")
+          .xAxisLabel("Data")
+          .margins({ top: 40, right: 50, bottom: 25, left: 40 })
+          .compose([
+            dc.lineChart(lineChart2)
+              .group(googleGroup, "Google")
+              .ordinalColors(["red"]),
+            dc.lineChart(lineChart2)
+              .group(facebookGroup, "Facebook")
+              .ordinalColors(["blue"]),
+          ])
+          .render();
+
+        dc.renderAll();
+      } 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.css"
+    />
+    <title>Earthquakes</title>
+  </head>
+  <body>
+    <script>
+      function container() {
+        return `
+        <main role="main" class="container">
+            <div class="row">
+              <h4> Earthquakes in New Zealand</h4>
+            </div>
+            <div class='row'>
+                <div id='magnitude-chart' class="col-6">
+                  <h5> Number of Events by Magnitude </h5>
+                </div>
+
+                <div id='depth-chart' class="col-6">
+                  <h5> Events by Depth (km) </h5>
+                </div>
+            </div>
+            <div class='row'>
+              <div id='time-chart' class="single-col">
+                <h5> Events per hour </h5>
+              </div>
+            </div>
+            <table class="table table-hover" id="dc-table-graph">
+                <thead>
+                    <tr class="header">
+                        <th>DTG</th>
+                        <th>Magnitude</th>
+                        <th>Depth</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                </thead>
+            </table>
+           <p>Earthquake data via <a href="https://quakesearch.geonet.org.nz/">Geonet</a>.</p>
+          </main>
+         `;
+      }
+
+      const earthquakesCSV = d3
+        .csv(
+          "https://gist.githubusercontent.com/emanueles/65a308ffa630689c11a031252998ef8d/raw/a004c770786229d54264406118ae21ba7e4c51a8/earthquakes.csv"
+        )
+        .then((data) => {
+            container();
+            let parseDate = d3.timeParse("%Y-%m-%dT%H:%M:%S");
+            data.forEach((d) => {
+                d.dtg = parseDate(d.origintime.substr(0,19))
+                d.magnitude = +d.magnitude;
+                d.depth = Math.round(+d.depth);
+            });
+        })
+        .catch((err) => {
+          console.error("Error loading the data: " + error);
+        });
+    </script>
+  </body>
+</html>

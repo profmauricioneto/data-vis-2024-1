@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Financial Stocks Line Chart with DC.js and Crossfilter</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter2/1.4.7/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.3/dc.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #chart {
+            margin: auto;
+            width: 80%;
+        }
+
+        .dc-legend {
+            fill: #333;
+        }
+
+        .dc-legend-item text {
+            fill: #333;
+        }
+
+        .line {
+            fill: none;
+            stroke-width: 2px;
+        }
+
+        .axis text {
+            font-size: 13px;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="chart"></div>
+
+    <script>
+        // Example CSV URL for financial stock data
+        const csvUrl = '../assets/all_stocks.csv'; // Replace with your data source
+
+        // Fetch the data
+        d3.csv(csvUrl).then((data) => {
+            let parseDate = d3.timeParse("%Y-%m-%d");
+            data.forEach((d) => {
+                d.date = parseDate(d.date);
+                d.open = +d.open;
+                d.close = +d.close;
+            });
+            buildVisualization(data);
+        }).catch((error) => {
+            console.error("Error loading or processing data:", error);
+        });
+
+        function buildVisualization(data) {
+            let facts = crossfilter(data);
+            let dateDimension = facts.dimension((d) => d.date);
+            let openGroup = dateDimension.group().reduceSum((d) => d.open);
+            let closeGroup = dateDimension.group().reduceSum((d) => d.close);
+
+            let compositeChart = dc.compositeChart("#chart");
+            let xScale = d3.scaleTime().domain([
+                dateDimension.bottom(1)[0].date,
+                dateDimension.top(1)[0].date,
+            ]);
+
+            compositeChart
+                .width(800)
+                .height(500)
+                .dimension(dateDimension)
+                .x(xScale)
+                .xUnits(d3.timeDays)
+                .renderHorizontalGridLines(true)
+                .brushOn(false)
+                .legend(dc.legend().x(680).y(10).itemHeight(13).gap(5))
+                .yAxisLabel("Stock Value")
+                .xAxisLabel("Date")
+                .margins({ top: 40, right: 50, bottom: 25, left: 40 })
+                .compose([
+                    dc.lineChart(compositeChart)
+                        .group(openGroup, "Open")
+                        .colors("red")
+                        .renderArea(false),
+                    dc.lineChart(compositeChart)
+                        .group(closeGroup, "Close")
+                        .colors("blue")
+                        .renderArea(false),
+                ])
+                .render();
+
+            dc.renderAll();
+        }
+    </script>
+</body>
+</html>
