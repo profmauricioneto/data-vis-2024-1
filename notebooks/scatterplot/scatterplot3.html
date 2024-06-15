@@ -67,8 +67,18 @@
                 .attr("cy", d => yScale(d[1]))
                 .attr("r", 5);
 
+            // Atualizar textos
+            circles.enter()
+                .append("text")
+                .attr("x", d => xScale(d[0]) + 5)
+                .attr("y", d => yScale(d[1]))
+                .style("font-family", "sans-serif")
+                .style("font-size", 12)
+                .style("fill", "red")
+                .text(d => d[0] + "," + d[1]);
+
             // Remover círculos que não existem mais
-            circles.exit().remove();
+            // circles.exit().remove();
 
             // Atualizar eixos
             svg.select(".x-axis")
@@ -98,6 +108,7 @@
 
             if (!isNaN(x) && !isNaN(y)) {
                 dataset.push([x, y]);
+                // document.querySelector("svg").innerHTML = "";
                 updateGraph();
             } else {
                 alert("Por favor, insira números válidos.");

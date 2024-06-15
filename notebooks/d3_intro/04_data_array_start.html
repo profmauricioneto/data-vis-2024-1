@@ -9,11 +9,12 @@
 <body>
 
 <script type="text/javascript">
+    let mynewdata = generateData();
     let data = [10, 15, 30, 50, 80, 65, 55, 30, 20, 10, 8];
-    function render(data) {
+    function render(mynewdata) {
         // Enter
         d3.select("body").selectAll("div.h-bar")
-            .data(data)
+            .data(mynewdata)
             .enter()
                 .append("div")
                     .attr("class", "h-bar")
@@ -23,7 +24,15 @@
 					
                 .append("span").text(function(d){ return d});
     }
-    render(data);
+
+    function generateData() {
+        let data = [];
+        for (let i = 0; i < 15; i++) {
+            data.push(Math.floor(Math.random() * 100));
+        }
+        return data;
+    }
+    render(mynewdata);
 </script>
 
 </body>

@@ -10,6 +10,14 @@
     <!-- crie um svg do tipo circular -->
     <svg width="500" height="500"></svg>
     <script type="text/javascript">
+      function generateScatterData() {
+        let data = [];
+        for (let i = 0; i < 20; i++) {
+          data.push([Math.floor(Math.random() * 100), Math.floor(Math.random() * 100)]);
+        }
+        return data;
+      }
+
       let dataset = [
         [5, 20],
         [480, 90],
